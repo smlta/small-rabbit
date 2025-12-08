@@ -1,8 +1,8 @@
 {
-  "compilerOptions": {
-    "paths": {
-      "@/*": ["./src/*"]
+  "compilerOptions" : {
+    "baseUrl" : "./",
+    "paths" : {
+      "@/*":["src/*"]
     }
-  },
-  "exclude": ["node_modules", "dist"]
-}
+  }
+} // 配置别名联想,@为src目录
