@@ -5,7 +5,6 @@
   const res = await getCategory()
   console.log(res)
  })
- 
 </script>
 
 <template>
@@ -14,6 +13,8 @@
  <el-button type="primary">click Me</el-button>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+   div {
+    color: $helpColor;
+   }
 </style>

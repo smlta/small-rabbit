@@ -29,10 +29,12 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        // 自动导入定制化样式文件进行样式覆盖(覆盖element-plus原有配色)
+        // 自动导入定制化样式文件进行样式覆盖(覆盖element-plus原有配色),自动导入scss文件
         additionalData: `
           @use "@/styles/element-plus/index.scss" as *;
+          @use "@/styles/var.scss" as *;
         `,
+        
       }
     }
   }
