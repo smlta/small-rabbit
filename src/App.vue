@@ -9,12 +9,7 @@
 
 <template>
 <router-view> </router-view> <!--一级路由出口-->
- <div>Hello World</div>
- <el-button type="primary">click Me</el-button>
 </template>
 
 <style scoped lang="scss">
-   div {
-    color: $helpColor;
-   }
 </style>
