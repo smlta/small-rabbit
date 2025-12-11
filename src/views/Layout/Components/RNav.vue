@@ -1,5 +1,11 @@
 <script setup>
-
+ import {getCategory} from '@/api/api'
+ import {ref,onMounted} from 'vue'
+ const navList = ref([]) // 导航标签数组
+ onMounted( async () => {
+  const res = await getCategory()
+  navList.value = res.result
+ }) 
 
 </script>
 
@@ -11,9 +17,7 @@
       </h1>
       <ul class="app-header-nav">
         <li class="home"><router-link to="/">首页</router-link></li>
-        <li><router-link to="/">居家</router-link></li>
-        <li><router-link to="/">美食</router-link></li>
-        <li><router-link to="/">服饰</router-link></li>
+        <li v-for="item in navList" :key="item.id"><router-link to="/">{{item.name}}</router-link></li>
       </ul>
       <div class="search">
         <i class="iconfont icon-search"></i>
@@ -78,7 +82,7 @@
     }
 
     input {
-      widows: 140px;
+      width: 140px;
       padding-left:5px;
       color: #666;
     }
