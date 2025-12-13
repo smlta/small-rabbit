@@ -12,3 +12,18 @@ export const getBannerList = () => {
     url: '/home/banner'
   })
 }
+
+// 获取新鲜好物数据
+export const getFreshData = () => {
+  return request({
+    url: '/home/new'
+  })
+}
+
+// 获取人气推荐数据
+
+export const getHotHuman = () => {
+  return request({
+    url: '/home/hot'
+  })
+}
