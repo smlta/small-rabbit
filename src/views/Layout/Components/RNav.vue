@@ -1,11 +1,11 @@
 <script setup>
- import {getCategory} from '@/api/api'
- import {ref,onMounted} from 'vue'
- const navList = ref([]) // 导航标签数组
- onMounted( async () => {
-  const res = await getCategory()
-  navList.value = res.result
- }) 
+ import {useRabbitStore} from '@/stores/index'
+ import {onMounted} from 'vue'
+ const store = useRabbitStore() //获取pinia仓库实例
+ onMounted(() => {
+  store.getNavList()
+ }) //发起action将数据缓存进pinia仓库
+
 
 </script>
 
@@ -17,7 +17,7 @@
       </h1>
       <ul class="app-header-nav">
         <li class="home"><router-link to="/">首页</router-link></li>
-        <li v-for="item in navList" :key="item.id"><router-link to="/">{{item.name}}</router-link></li>
+        <li v-for="item in store.navList" :key="item.id"><router-link to="/">{{item.name}}</router-link></li>
       </ul>
       <div class="search">
         <i class="iconfont icon-search"></i>
