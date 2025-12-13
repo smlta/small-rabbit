@@ -9,11 +9,11 @@ const router = createRouter({
       children:[
         {
           path: '',
-          component: () => import('@/views/Layout/children/RHome.vue')
+          component: () => import('@/views/Layout/children/RHome/RIndex.vue')
         },
         {
           path: 'category',
-          component: () => import('@/views/Layout/children/RCategory.vue')
+          component: () => import('@/views/Layout/children/RCategory/RCategory.vue')
         } // /category访问
       ]
     },
