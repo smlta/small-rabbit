@@ -3,6 +3,7 @@
 import HomeCategory from './components/HomeCategory.vue'
 import HomeHot from './components/HomeHot.vue'
 import HomeNew from './components/HomeNew.vue'
+import HomeProduct from '@/views/Layout/children/RHome/components/HomeProduct.vue'
 </script>
 
 
@@ -13,6 +14,7 @@ import HomeNew from './components/HomeNew.vue'
 </div>
 <HomeNew></HomeNew> <!--新鲜好物-->
 <HomeHot></HomeHot> <!--产品列表-->
+<HomeProduct></HomeProduct> <!--产品区域-->
 
 </template>
 

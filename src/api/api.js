@@ -27,3 +27,9 @@ export const getHotHuman = () => {
     url: '/home/hot'
   })
 }
+ // 获取商品列表数据
+export const getProductList = () => {
+  return request({
+    url: '/home/goods'
+  })
+}
